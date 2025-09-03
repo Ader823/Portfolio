@@ -1,0 +1,41 @@
+Audio Effects:
+The two audio effect nodes I added to the audio routing graph were a treble and bass node, 
+or a highshelf and lowshelf biquad filter node. 
+I added a slider to control how much you want to effect the base or treble.
+
+Sprites:
+I made two sprite types - 
+The first is SpinSprite. It is a class that you can give it an image source, 
+and that image will spin to the music.
+The second is called StarSprite. It will draw a with the number of points you specify.
+The stars will grow and shrink based on the low frequency data of songs. The visualizer
+uses up to 100 stars, and the user can control how many they want to see.
+
+App Data:
+The app data that I put in the av-data.json file was the App Name,
+a list of songs that the app uses to get the song files, and instructions
+for the app.
+
+Improved Aesthetics
+I changed the gradient to be less garish. It is now very cool.
+The circles I changed to be stroked instead of filled, and I think it looks
+a lot better this way, and I changed the colors to look less arbitrary.
+I changed the bars to be radial instead of horizontal. For additional
+visual interest, I added a circle to the end of each bar that jumps up
+when that audio range increases.
+
+I also added new bitmap effects - a color filter that when applied will change
+the rgb values to give different looks, and a color boost, which increases the 
+saturation of the  visualizer. 
+
+I think I should get a full 15% because I reworked a lot of the assignment's original
+aspects to look nicer and be styalistically appropriate for my visualizer, I added
+new controls that add interest to the visualizer, and the things I kept from the assignment
+go with my visualizer, so it was good to keep them.
+
+
+Language:
+I used typescript. I fixed all the errors, and then strongly typed all
+function paramaters and all variable declarations. I also made the classes
+typescript friendly and added function paramaters destructuring with the classes.
+Finally, I made interfaces and enums for some information and variables as appropriate.

@@ -1,0 +1,5 @@
+{
+    "title": "Planet Audio Visualizer",
+    "audioFiles": ["Your Love - The Outfield", "Good Vibrations - The Beach Boys", "New Adventure Theme", "Peanuts Theme", "The Picard Song"],
+    "instructions" : "Select a track and hit play to listen. Then you can see the visualizer react to the audio. Change the settings to see how the visualizer changes."
+}

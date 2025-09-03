@@ -1,0 +1,12 @@
+body {
+  font-family: tahoma, verdana, sans serif;
+}
+
+button[data-playing="yes"]:after {
+  content: "Pause";
+}
+
+button[data-playing="no"]:after {
+  content: "Play";
+}
+

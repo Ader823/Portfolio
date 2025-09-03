@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Audio Visualizer</title>
+  <link href="./styles/default-styles.css" type="text/css" rel="stylesheet" />
+  <!-- <script src="./src/loader.js" type="module"></script> -->
+  <script src="./dist/bundle.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav class="navbar has-shadow is-white">
+    <!-- logo / brand -->
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <i class="fas fa-music"></i>
+      </a>
+      <a class="navbar-burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="nav-links">
+      <div class="navbar-start">
+        <a class="navbar-item is-hoverable has-text-weight-bold" href="index.html">App</a>
+        <a class="navbar-item is-hoverable" href="about.html">About</a>
+      </div> <!-- end navbar-start -->
+    </div>
+  </nav>
+  <main style="display: flex;" class="has-background-dark has-text-light">
+    <div id="canvas">
+      <canvas class="has-background-dark mx-2 my-3" width="700" height="700"></canvas>
+    </div>
+    <div id="app" class="px-2">
+      <h1 id="heading" class="is-size-3 has-text-weight-bold has-text-warning"></h1>
+      <div id="controls">
+        <section class="py-3">
+          <button id="btn-play" data-playing="no"></button>
+          <button id="fs-button">Full Screen</button>
+          <label>Track:
+            <select id="track-select">
+            </select>
+          </label>
+        </section>
+        <div id="audio-controls" class="py-3">
+          <h3 class="is-size-4 has-text-weight-bold has-text-warning">Audio Controls</h3>
+          <section>
+            Volume: <input type="range" id="volume-slider" min="0" max="2" value="1" step="0.01">
+            <span id="volume-label">???</span>
+          </section>
+          <section>
+            Bass Control: <input type="range" id="bass-slider" min="-25" max="15" value="0" step="1">
+            <span id="bass-label" class="mr-2">???</span>
+            Treble Control: <input type="range" id="treble-slider" min="-25" max="25" value="0" step="1">
+            <span id="treble-label">???</span>
+          </section>
+          <section>
+            <input type="radio" id="btn-frequency-data" name="audio-data-type" value="true">
+            <label for="btn-frequency-data">Use Frequency Data</label><br>
+            <input type="radio" id="btn-time-domain" name="audio-data-type" value="">
+            <label for="btn-time-domain">Use Time Domain</label><br>
+          </section>
+        </div>
+        <div id="visual-controls">
+          <h3 class="is-size-4 has-text-weight-bold has-text-warning">Visual Controls</h3>
+          <section>
+            Number of stars: <input type="range" id="star-slider" min="0" max="100" value="100" step="1">
+            <span id="star-label"></span>
+            <button id="btn-stars">Randomize Stars</button>
+          </section>
+          <section class="pt-2">
+            <div class="columns mb-0">
+              <span class="column"><input type="checkbox" id="cb-gradient"><label for="cb-gradient">Show
+                  Gradient</label></span>
+              <span class="column"><input type="checkbox" id="cb-bars"><label for="cb-bars">Show Bars</label></span>
+              <span class="column"><input type="checkbox" id="cb-circles"><label for="cb-circles">Show
+                  Circles</label></span>
+            </div>
+            <div class="columns pt-0">
+              <span class="column"><input type="checkbox" id="cb-noise"><label for="cb-noise">Noise</label></span>
+              <span class="column"><input type="checkbox" id="cb-invert"><label for="cb-invert">Invert</label></span>
+              <span class="column"><input type="checkbox" id="cb-emboss"><label for="cb-emboss">Emboss</label></span>
+            </div>
+          </section>
+          <section class="mt-2">
+            <label class="mr-2">Color Filters:
+              <select id="filter-select">
+                <option value="none">None</option>
+                <option value="mars">Mars</option>
+                <option value="uranus">Uranus</option>
+                <option value="saturn">Saturn</option>
+                <option value="moon">Moon</option>
+              </select>
+            </label>
+            Color Boost: <input type="range" id="sat-slider" min="1" max="1.3" value="0" step="0.1">
+            <span id="sat-label"></span>
+          </section>
+        </div>
+        <div class="py-4">
+          <h2 class="is-size-4 has-text-weight-bold has-text-warning">Instructions:</h2>
+          <p id="instructions">...</p>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

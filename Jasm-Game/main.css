@@ -1,0 +1,7 @@
+#gameDiv{
+    /* border: 10px  solid blue; */
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

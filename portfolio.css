@@ -1,0 +1,324 @@
+@media screen and (max-width: 1250px) {
+    #wrapper {
+        margin: 0;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 1fr .5fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:"title"
+                            "nav"
+                            "about"
+                            "section1" 
+                            "section2"
+                            "top"
+                            "footer";
+    
+    }
+    #about{
+        grid-area: about;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        background-color: #333533;
+        color: #e8eddf;
+    }
+    #about h2{
+        color:#f5cb5c;
+    }
+    #about p {
+        color: #e8eddf;
+        font-size: 20px;
+    }
+    #portrait{
+        max-width: 400px;
+        /* max-height: 500px; */
+        align-self: center;
+        padding-top: 50px;
+    
+    }
+
+    #projects .project{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    #projects .project .projectTxt{
+        border: 1px solid black;
+        padding: 10px;
+        background-color: #333533;
+        color: #e8eddf;
+    
+    }
+    #projects .project .projectTxt h2{
+        color:#f5cb5c;
+    }
+    
+    #projects .project img {
+        max-width: 100%;
+        transition: transform .2s;
+    }
+    #details{
+        background-color: #242423;
+        margin-top: 0;
+        padding: 5px 5px 1px;
+        margin-bottom: 10px;
+        color:#f5cb5c;
+    }
+}
+
+
+@media screen and (min-width: 1250px) {
+    #wrapper {
+        margin: 0;
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-rows: 50px 1fr .5fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:"left title right"
+                            "left nav right"
+                            "left about right"
+                            "left section1 right" 
+                            "left section2 right"
+                            "left top right"
+                            "left footer right";
+    }
+    #details{
+        background-color: #242423;
+        margin-top: 0;
+        padding: 5px 5px 1px;
+        margin-bottom: 10px;
+        color:#f5cb5c;
+    }
+    #about{
+        grid-area: about;
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        margin-bottom: 100px;
+        background-color: #333533;
+        color: #e8eddf;
+    }
+    #about h2{
+        color:#f5cb5c;
+    }
+    #about p {
+        color: #e8eddf;
+        font-size: 20px;
+    }
+    #portrait{
+        /* max-width: 400px; */
+        max-height: 500px;
+        /* align-self: center; */
+    
+    }
+    #projects{
+        grid-area: section1;
+        margin-bottom: 100px;
+    }
+    #projects .project{
+        display: flex;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+    #projects .project .projectTxt{
+        border: 1px solid black;
+        margin-left: 10px;
+        padding: 10px;
+        background-color: #333533;
+        color: #e8eddf;
+    
+    }
+    #projects .project img {
+        max-width: 500px;
+        transition: transform .2s;
+    }
+    
+}
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+body{
+    background-color: #cfdbd5;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    font-family: 'Source Sans 3', sans-serif;
+}
+h2{
+    font-size: 40px;
+}
+h1{
+    font-size:50px
+}
+
+.gallery {
+  background: #EEE;
+}
+
+.gallery-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #8C8;
+  counter-increment: gallery-cell;
+}
+
+/* cell number */
+.gallery-cell:before {
+  display: block;
+  text-align: center;
+  content: counter(gallery-cell);
+  line-height: 200px;
+  font-size: 80px;
+  color: white;
+}
+
+h1, h2{
+    color: #242423;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight:700;
+}
+p{
+    
+}
+#title{
+    grid-area: title;
+    margin: 10px 0;
+}
+#nav{
+    grid-area: nav;
+    
+    background-color: #333533;
+    margin: 15px 0;
+    padding-top:10px;
+    
+}
+#nav ul{
+    display: flex;
+    justify-content: space-around;
+    padding:0;
+    align-items: end;
+    
+}
+#nav ul li {
+    list-style-type: none;
+    font-size: 30px;
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight:300;
+}
+
+#aboutTxt{
+    /* border: 1px solid black; */
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+#projects{
+    grid-area: section1;
+    margin-bottom: 100px;
+}
+
+#projects .project .projectTxt h2{
+    color:#f5cb5c;
+}
+
+
+#projects .project img:hover {
+    transform:scale(1.02);
+}
+
+#art{
+    grid-area: section2;
+}
+#art img{
+    max-width: 100%;
+    /* margin: 10px 0; */
+    color: #f5cb5c;;
+}
+#art h3{
+    margin-bottom: 10px;
+    background-color: #333533;
+    color:#f5cb5c;
+    padding: 10px 0;
+}
+
+#d_images{
+    display: flex;
+    flex-direction: row;
+}
+#drawings{
+    background-color: #333533;
+    color:#f5cb5c;
+    padding: 10px 0;
+}
+#drawings h3 {
+    margin-bottom: 0;
+    padding: 0 10px;
+}
+
+#art a {
+    background-color: #333533;
+    padding: 20px 50px;
+    margin-left: auto;
+}
+#drawings a {
+    background-color: #333533;
+    padding: 20px 20px;
+    margin-left: auto;
+    margin: 5px  0;
+}
+#top{
+    grid-area: top;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+#top a {
+    background-color:#333533;
+    padding: 5px;
+    margin-top: 50px
+}
+#footer{
+    grid-area: footer;
+    background-color: #242423;
+    color:#f5cb5c;
+    margin: 100px 0 10px;
+}
+#footer ul {
+    display: flex;
+    justify-content: space-around;
+    padding-top:10px;
+}
+#footer ul li {
+    list-style-type: none;
+}
+#left{
+    grid-area: left;
+}
+#right{
+    grid-area: right;
+}
+
+/* Link stuff (for the requirement) */
+a:link {
+    color:#f5cb5c;
+}
+
+a:visited {
+    color:#f5cb5c;
+}
+
+
+a:hover {
+    color: rgb(190, 190, 190);
+}
+
+a:active {
+    color:#cfdbd5;
+}

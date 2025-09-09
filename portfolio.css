@@ -46,11 +46,13 @@
         margin: 10px 0;
         font-size: 20px;
     }
+
     #projects .project .projectTxt{
         border: 1px solid black;
         padding: 10px;
         background-color: #333533;
         color: #e8eddf;
+        font-size: 3px;
     
     }
     #projects .project .projectTxt h2{
@@ -222,6 +224,10 @@ p{
 #projects{
     grid-area: section1;
     margin-bottom: 100px;
+}
+
+#projects .project {
+
 }
 
 #projects .project .projectTxt h2{
